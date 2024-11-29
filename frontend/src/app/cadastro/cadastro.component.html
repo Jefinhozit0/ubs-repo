@@ -1,86 +1,181 @@
-<p>cadastro works!</p>
-<div class="container d-flex justify-content-center align-items-center min-vh-100 bg-light">
-  <div class="card shadow-lg p-4 w-100" style="max-width: 600px;">
-    <h3 class="text-center mb-4">Cadastro de Paciente</h3>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro e-SUS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="cadastro.component.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <h3 class="text-center mb-4">Cadastro e-SUS</h3>
     <form>
-      <div class="mb-3">
-        <label for="nomeCompleto" class="form-label">Nome Completo:</label>
-        <input
-          id="nomeCompleto"
-          type="text"
-          class="form-control"
-          placeholder="Digite o nome completo"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="nomeSocial" class="form-label">Nome Social:</label>
-        <input
-          id="nomeSocial"
-          type="text"
-          class="form-control"
-          placeholder="Digite o nome social (se houver)"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="nomePai" class="form-label">Nome do Pai:</label>
-        <input
-          id="nomePai"
-          type="text"
-          class="form-control"
-          placeholder="Digite o nome do pai (se houver)"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="nomeMae" class="form-label">Nome da Mãe:</label>
-        <input
-          id="nomeMae"
-          type="text"
-          class="form-control"
-          placeholder="Digite o nome da mãe"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="dataNascimento" class="form-label">Data de Nascimento:</label>
-        <input
-          id="dataNascimento"
-          type="date"
-          class="form-control"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="sexo" class="form-label">Sexo:</label>
-        <select id="sexo" class="form-select" required>
-          <option selected disabled>Selecione o sexo</option>
-          <option value="masculino">Masculino</option>
-          <option value="feminino">Feminino</option>
-          <option value="outro">Outro</option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <label for="nacionalidade" class="form-label">Nacionalidade:</label>
-        <input
-          id="nacionalidade"
-          type="text"
-          class="form-control"
-          placeholder="Digite a nacionalidade"
-          required
-        />
-      </div>
-      <div class="mb-3">
-        <label for="racaCor" class="form-label">Raça/Cor:</label>
-        <input
-          id="racaCor"
-          type="text"
-          class="form-control"
-          placeholder="Digite a raça ou cor"
-        />
-      </div>
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary w-100">Registrar</button>
-      </div>
+      <!-- Dados Pessoais -->
+      <fieldset class="border p-2">
+        <legend class="w-auto">Dados Pessoais</legend>
+        <div class="row">
+          <div class="form-floating col-md-6">
+            <input id="nomeCompleto" type="text" class="form-control" required />
+            <label for="nomeCompleto" class="form-label">Nome Completo</label>
+          </div>
+          <div class="form-floating col-md-6">
+            <input id="nomeSocial" type="text" class="form-control" />
+            <label for="nomeSocial" class="form-label">Nome Social</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-floating col-md-6">
+            <input id="nomeMae" type="text" class="form-control" required />
+            <label for="nomeMae" class="form-label">Nome da Mãe</label>
+          </div>
+          <div class="form-floating col-md-6">
+            <input id="nomePai" type="text" class="form-control" />
+            <label for="nomePai" class="form-label">Nome do Pai</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-floating col-md-4">
+            <input id="dataNascimento" type="date" class="form-control" required />
+            <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+          </div>
+          <div class="form-floating col-md-4">
+            <select id="sexo" class="form-select" required>
+              <option selected disabled>Selecione</option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+            </select>
+            <label for="sexo" class="form-label">Sexo</label>
+          </div>
+          <div class="form-floating col-md-4">
+            <input id="nacionalidade" type="text" class="form-control" />
+            <label for="nacionalidade" class="form-label">Nacionalidade</label>
+          </div>
+        </div>
+        <div class="form-floating">
+          <input id="municipioNascimento" type="text" class="form-control" />
+          <label for="municipioNascimento" class="form-label">Município de Nascimento</label>
+        </div>
+        <div class="form-floating">
+          <input id="racaCor" type="text" class="form-control" />
+          <label for="racaCor" class="form-label">Raça/Cor</label>
+        </div>
+        <div class="form-floating">
+          <select id="frequentaEscola" class="form-select">
+            <option selected disabled>Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+          <label for="frequentaEscola" class="form-label">Frequenta Escola</label>
+        </div>
+        <div class="form-floating">
+          <input id="escolaridade" type="text" class="form-control" />
+          <label for="escolaridade" class="form-label">Escolaridade</label>
+        </div>
+        <div class="form-floating">
+          <input id="situacaoFamiliar" type="text" class="form-control" />
+          <label for="situacaoFamiliar" class="form-label">Situação Familiar</label>
+        </div>
+        <div class="form-floating">
+          <input id="estabelecimentoVinculo" type="text" class="form-control" />
+          <label for="estabelecimentoVinculo" class="form-label">Estabelecimento de Vínculo</label>
+        </div>
+        <div class="form-floating">
+          <input id="estabelecimentoCadastro" type="text" class="form-control" />
+          <label for="estabelecimentoCadastro" class="form-label">Estabelecimento de Cadastro</label>
+        </div>
+        <div class="form-floating">
+          <select id="deficiencia" class="form-select">
+            <option selected disabled>Selecione</option>
+            <option value="visual">Visual</option>
+            <option value="auditiva">Auditiva</option>
+            <option value="motora">Motora</option>
+            <option value="intelectual">Intelectual</option>
+          </select>
+          <label for="deficiencia" class="form-label">Deficiência</label>
+        </div>
+      </fieldset>
+      <hr />
+
+      <!-- Dados de Contato -->
+      <fieldset class="border p-2">
+        <legend class="w-auto">Dados de Contato</legend>
+        <div class="form-floating">
+          <input id="telefoneCelular" type="text" class="form-control" />
+          <label for="telefoneCelular" class="form-label">Telefone Celular</label>
+        </div>
+        <div class="form-floating">
+          <input id="telefoneResidencial" type="text" class="form-control" />
+          <label for="telefoneResidencial" class="form-label">Telefone Residencial</label>
+        </div>
+        <div class="form-floating">
+          <input id="telefoneComercial" type="text" class="form-control" />
+          <label for="telefoneComercial" class="form-label">Telefone Comercial</label>
+        </div>
+        <div class="form-floating">
+          <input id="telefoneContato" type="text" class="form-control" />
+          <label for="telefoneContato" class="form-label">Telefone de Contato</label>
+        </div>
+        <div class="form-floating">
+          <input id="email" type="email" class="form-control" />
+          <label for="email" class="form-label">E-mail</label>
+        </div>
+      </fieldset>
+      <hr />
+
+      <!-- Endereço -->
+      <fieldset class="border p-2">
+        <legend class="w-auto">Endereço</legend>
+        <div class="form-floating">
+          <input id="origemEndereco" type="text" class="form-control" />
+          <label for="origemEndereco" class="form-label">Origem do Endereço</label>
+        </div>
+        <div class="form-floating">
+          <input id="cep" type="text" class="form-control" />
+          <label for="cep" class="form-label">CEP</label>
+        </div>
+        <div class="form-floating">
+          <input id="logradouro" type="text" class="form-control" />
+          <label for="logradouro" class="form-label">Logradouro</label>
+        </div>
+        <div class="row">
+          <div class="form-floating col-md-6">
+            <input id="numero" type="text" class="form-control" />
+            <label for="numero" class="form-label">Número</label>
+          </div>
+          <div class="form-floating col-md-6">
+            <input id="bairro" type="text" class="form-control" />
+            <label for="bairro" class="form-label">Bairro</label>
+          </div>
+        </div>
+        <div class="form-floating">
+          <input id="complemento" type="text" class="form-control" />
+          <label for="complemento" class="form-label">Complemento</label>
+        </div>
+        <div class="form-floating">
+          <input id="referencia" type="text" class="form-control" />
+          <label for="referencia" class="form-label">Referência</label>
+        </div>
+      </fieldset>
+      <hr />
+
+      <!-- Documentos -->
+      <fieldset class="border p-2">
+        <legend class="w-auto">Documentos</legend>
+        <div class="form-floating">
+          <input id="cpf" type="text" class="form-control" />
+          <label for="cpf" class="form-label">CPF</label>
+        </div>
+        <div class="form-floating">
+          <input id="identidade" type="text" class="form-control" />
+          <label for="identidade" class="form-label">Identidade</label>
+        </div>
+      </fieldset>
+      <hr />
+
+      <!-- Botões -->
+      <button type="submit" class="btn btn-primary btn-block">Gravar</button>
+      <button type="button" class="btn btn-secondary btn-block">Cancelar</button>
     </form>
   </div>
-</div>
+</body>
+</html>

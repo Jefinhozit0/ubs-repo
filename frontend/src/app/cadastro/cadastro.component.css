@@ -1,0 +1,25 @@
+.container-fluid {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  fieldset {
+    margin-bottom: 15px;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+     }
