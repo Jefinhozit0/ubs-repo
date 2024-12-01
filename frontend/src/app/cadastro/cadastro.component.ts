@@ -1,30 +1,84 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { EsusService } from '../services/esus.service';
+
 @Component({
   selector: 'app-cadastro',
-  standalone: true,
-  imports: [FormsModule],
   templateUrl: './cadastro.component.html',
-  styleUrl: './cadastro.component.css'
+  styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent {
- 
-  paciente = {
+  form = {
     nomeCompleto: '',
     nomeSocial: '',
-    nomePai: '',
     nomeMae: '',
+    nomePai: '',
     dataNascimento: '',
     sexo: '',
     nacionalidade: '',
+    municipioNascimento: '',
     racaCor: '',
-    contato: '',
+    frequentaEscola: '',
+    escolaridade: '',
+    situacaoFamiliar: '',
+    estabelecimentoVinculo: '',
+    estabelecimentoCadastro: '',
+    deficiencia: '',
+    telefoneCelular: '',
+    telefoneResidencial: '',
+    telefoneComercial: '',
+    telefoneContato: '',
+    email: '',
+    origemEndereco: '',
+    cep: '',
+    logradouro: '',
+    numero: '',
+    bairro: '',
+    complemento: '',
+    referencia: '',
     cpf: '',
     identidade: ''
   };
 
-  onSubmit() {
-    console.log('Dados do paciente:', this.paciente);
-  
+  constructor(private esusService: EsusService) {}
+
+  onSubmit(): void {
+    this.esusService.create(this.form).subscribe({
+      next: () => alert('Registro salvo com sucesso!'),
+      error: (err: { message: string; }) => alert('Erro ao salvar o registro: ' + err.message)
+    });
+  }
+
+  resetForm(): void {
+    this.form = {
+      nomeCompleto: '',
+      nomeSocial: '',
+      nomeMae: '',
+      nomePai: '',
+      dataNascimento: '',
+      sexo: '',
+      nacionalidade: '',
+      municipioNascimento: '',
+      racaCor: '',
+      frequentaEscola: '',
+      escolaridade: '',
+      situacaoFamiliar: '',
+      estabelecimentoVinculo: '',
+      estabelecimentoCadastro: '',
+      deficiencia: '',
+      telefoneCelular: '',
+      telefoneResidencial: '',
+      telefoneComercial: '',
+      telefoneContato: '',
+      email: '',
+      origemEndereco: '',
+      cep: '',
+      logradouro: '',
+      numero: '',
+      bairro: '',
+      complemento: '',
+      referencia: '',
+      cpf: '',
+      identidade: ''
+    };
   }
 }

@@ -1,1 +1,28 @@
-<p>lista works!</p>
+<div class="listagem">
+    <input
+      type="text"
+      placeholder="Buscar por nome ou documento"
+      [(ngModel)]="searchQuery"
+      (keyup)="onSearch()"
+    />
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Documento</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of registros">
+          <td>{{ item.nome }}</td>
+          <td>{{ item.documento }}</td>
+          <td>
+            <button (click)="onEdit(item)">Editar</button>
+            <button (click)="onDelete(item.id)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
