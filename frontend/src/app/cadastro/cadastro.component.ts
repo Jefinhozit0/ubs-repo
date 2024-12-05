@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { Paciente } from '../model/paciente';
-import { PacienteService } from '../service/paciente.service';
+import { PacienteService } from "../service/PacienteService";
 
 @Component({
   selector: 'app-cadastro',
