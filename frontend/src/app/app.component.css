@@ -1,0 +1,93 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f8ff; /* Fundo suave e agradável */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dcdcdc;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    font-size: 36px;
+    color: #0056b3; /* Cor azul para o título */
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Estilo dos links (botões) */
+a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilos para os botões */
+.btn {
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn-outline-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-outline-info:hover {
+    background-color: #138496;
+    transform: scale(1.05);
+}
+
+.btn-outline-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-outline-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.btn-outline-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-outline-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+}
