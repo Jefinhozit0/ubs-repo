@@ -1,138 +1,139 @@
 <div class="container">
-  <h1>Cadastro de Paciente</h1>
-
-  <!-- Informações Pessoais -->
-  <section>
+    <h1>Cadastro de Paciente</h1>
+  
+    <!-- Informações Pessoais -->
+    <section>
       <h3>Informações Pessoais</h3>
-
+  
       <div class="mb-3">
-          <label for="id">ID</label>
-          <input type="text" id="id" [(ngModel)]="obj.id">
+        <label for="id">ID</label>
+        <input type="text" id="id" [(ngModel)]="obj.id">
       </div>
-
+  
       <div class="mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" [(ngModel)]="obj.nome">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" [(ngModel)]="obj.nome">
       </div>
-
+  
       <div class="mb-3">
-          <label for="cpf">CPF</label>
-          <input type="text" id="cpf" [(ngModel)]="obj.cpf">
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" [(ngModel)]="obj.cpf">
       </div>
-
+  
       <div class="mb-3">
-          <label for="nomeSocial">Nome Social</label>
-          <input type="text" id="nomeSocial" [(ngModel)]="obj.nomeSocial">
+        <label for="nomeSocial">Nome Social</label>
+        <input type="text" id="nomeSocial" [(ngModel)]="obj.nomeSocial">
       </div>
-
+  
       <div class="mb-3">
-          <label for="nomeMae">Nome da Mãe</label>
-          <input type="text" id="nomeMae" [(ngModel)]="obj.nomeMae">
+        <label for="nomeMae">Nome da Mãe</label>
+        <input type="text" id="nomeMae" [(ngModel)]="obj.nomeMae">
       </div>
-
+  
       <div class="mb-3">
-          <label for="dataNascimento">Data de Nascimento</label>
-          <input type="date" id="dataNascimento" [(ngModel)]="obj.dataNascimento">
+        <label for="dataNascimento">Data de Nascimento</label>
+        <input type="date" id="dataNascimento" [(ngModel)]="obj.dataNascimento">
       </div>
-
+  
       <div class="mb-3">
-          <label for="sexo">Sexo</label>
-          <select id="sexo" [(ngModel)]="obj.sexo">
-              <option value="masculino">Masculino</option>
-              <option value="feminino">Feminino</option>
-              <option value="outro">Outro</option>
-          </select>
+        <label for="sexo">Sexo</label>
+        <select id="sexo" [(ngModel)]="obj.sexo">
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select>
       </div>
-
+  
       <div class="mb-3">
-          <label for="nacionalidade">Nacionalidade</label>
-          <input type="text" id="nacionalidade" [(ngModel)]="obj.nacionalidade">
+        <label for="nacionalidade">Nacionalidade</label>
+        <input type="text" id="nacionalidade" [(ngModel)]="obj.nacionalidade">
       </div>
-
+  
       <div class="mb-3">
-          <label for="municipioNascimento">Município de Nascimento</label>
-          <input type="text" id="municipioNascimento" [(ngModel)]="obj.municipioNascimento">
+        <label for="municipioNascimento">Município de Nascimento</label>
+        <input type="text" id="municipioNascimento" [(ngModel)]="obj.municipioNascimento">
       </div>
-
+  
       <div class="mb-3">
-          <label for="racaCor">Raça/Cor</label>
-          <input type="text" id="racaCor" [(ngModel)]="obj.racaCor">
+        <label for="racaCor">Raça/Cor</label>
+        <input type="text" id="racaCor" [(ngModel)]="obj.racaCor">
       </div>
-  </section>
-
-  <!-- Escolaridade e Situação Familiar -->
-  <section>
+    </section>
+  
+    <!-- Escolaridade e Situação Familiar -->
+    <section>
       <h3>Escolaridade e Situação Familiar</h3>
-
+  
       <div class="mb-3">
-          <label for="frequentaEscola">Frequenta Escola</label>
-          <select id="frequentaEscola" [(ngModel)]="obj.frequentaEscola">
-              <option value="sim">Sim</option>
-              <option value="nao">Não</option>
-          </select>
+        <label for="frequentaEscola">Frequenta Escola</label>
+        <select id="frequentaEscola" [(ngModel)]="obj.frequentaEscola">
+          <option value="sim">Sim</option>
+          <option value="nao">Não</option>
+        </select>
       </div>
-
+  
       <div class="mb-3">
-          <label for="escolaridade">Escolaridade</label>
-          <input type="text" id="escolaridade" [(ngModel)]="obj.escolaridade">
+        <label for="escolaridade">Escolaridade</label>
+        <input type="text" id="escolaridade" [(ngModel)]="obj.escolaridade">
       </div>
-
+  
       <div class="mb-3">
-          <label for="situacaoFamiliar">Situação Familiar</label>
-          <input type="text" id="situacaoFamiliar" [(ngModel)]="obj.situacaoFamiliar">
+        <label for="situacaoFamiliar">Situação Familiar</label>
+        <input type="text" id="situacaoFamiliar" [(ngModel)]="obj.situacaoFamiliar">
       </div>
-  </section>
-
-  <!-- Endereço -->
-  <section>
+    </section>
+  
+    <!-- Endereço -->
+    <section>
       <h3>Endereço</h3>
-
+  
       <div class="mb-3">
-          <label for="origemEndereco">Origem do Endereço</label>
-          <input type="text" id="origemEndereco" [(ngModel)]="obj.origemEndereco">
+        <label for="origemEndereco">Origem do Endereço</label>
+        <input type="text" id="origemEndereco" [(ngModel)]="obj.origemEndereco">
       </div>
-
+  
       <div class="mb-3">
-          <label for="endereco">Endereço</label>
-          <input type="text" id="endereco" [(ngModel)]="obj.endereco">
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" [(ngModel)]="obj.endereco">
       </div>
-  </section>
-
-  <!-- Contatos -->
-  <section>
+    </section>
+  
+    <!-- Contatos -->
+    <section>
       <h3>Dados de Contato</h3>
-
+  
       <div class="mb-3">
-          <label for="celular">Celular</label>
-          <input type="text" id="celular" [(ngModel)]="obj.celular">
+        <label for="celular">Celular</label>
+        <input type="text" id="celular" [(ngModel)]="obj.celular">
       </div>
-
+  
       <div class="mb-3">
-          <label for="residencial">Residencial</label>
-          <input type="text" id="residencial" [(ngModel)]="obj.residencial">
+        <label for="residencial">Residencial</label>
+        <input type="text" id="residencial" [(ngModel)]="obj.residencial">
       </div>
-
+  
       <div class="mb-3">
-          <label for="comercial">Comercial</label>
-          <input type="text" id="comercial" [(ngModel)]="obj.comercial">
+        <label for="comercial">Comercial</label>
+        <input type="text" id="comercial" [(ngModel)]="obj.comercial">
       </div>
-
+  
       <div class="mb-3">
-          <label for="email">Email</label>
-          <input type="email" id="email" [(ngModel)]="obj.email">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="obj.email">
       </div>
-  </section>
-
-  <!-- Identidade -->
-  <section>
+    </section>
+  
+    <!-- Identidade -->
+    <section>
       <h3>Identidade</h3>
-
+  
       <div class="mb-3">
-          <label for="identidade">Identidade</label>
-          <input type="text" id="identidade" [(ngModel)]="obj.identidade">
+        <label for="identidade">Identidade</label>
+        <input type="text" id="identidade" [(ngModel)]="obj.identidade">
       </div>
-  </section>
-
-  <!-- Botão Salvar -->
-  <button (click)="salvar();">Salvar</button>
-</div>
+    </section>
+  
+    <!-- Botão Salvar -->
+    <button (click)="salvar();">Salvar</button>
+  </div>
+  

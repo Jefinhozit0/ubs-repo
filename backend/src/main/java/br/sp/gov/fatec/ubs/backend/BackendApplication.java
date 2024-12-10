@@ -1,4 +1,3 @@
-
 package br.sp.gov.fatec.ubs.backend;
 
 import org.springframework.boot.SpringApplication;
